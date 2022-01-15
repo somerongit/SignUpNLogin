@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Register User</h2>
+    <form id="reg-form">
+        <input type="text" placeholder="Username" id="uname"> <br>
+        <input type="password" placeholder="Password" id="psw"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const form = document.getElementById('reg-form')
+        form.addEventListener('submit',regUser)
+
+        async function regUser(evet){
+            event.preventDefault()
+            const uNam = document.getElementById('uname').value
+            const psw = document.getElementById('psw').value
+
+            const result = await fetch('/api/register',{
+                method:'POST',
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+                body:JSON.stringify({
+                    'username':uNam,
+                    'password':psw
+                })
+            }).then(res=>res.json())
+            console.log(result);
+        }
+    </script>
+</body>
+</html>
