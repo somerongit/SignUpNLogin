@@ -1,0 +1,19 @@
+{
+  "name": "signupnlogin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somerongit/SignUpNLogin.git"
+  },
+  "author": "Someron Bakuli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/somerongit/SignUpNLogin/issues"
+  },
+  "homepage": "https://github.com/somerongit/SignUpNLogin#readme"
+}
