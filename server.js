@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 const User = require('./model/user')
 const bcrypt = require('bcrypt')
 
-mongoose.connect('mongodb+srv://admin:root@cluster0.kxotw.mongodb.net/DB?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://user:password@cluster0.kxotw.mongodb.net/DB?retryWrites=true&w=majority')
 const app = express()
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.json())
